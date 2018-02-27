@@ -1,0 +1,27 @@
+server:
+  #配置端口号
+  port: 7900
+spring:
+  jpa:
+    #设置启动时是否生成DDL语句，sql已写，所以false
+    generate-ddl: false
+    #是否显示sql语句
+    show-sql: true
+    #启动时DDL语句处理
+    hibernate:
+      ddl-auto: none
+  #数据源
+  datasource:
+    #指定数据库类型
+    platform: h2
+    #设置建表语句：路径+文件名
+    schema: classpath:schema.sql
+    #设置数据表数据：
+    data: classpath:data.sql
+#配置日志级别
+logging:
+  level:
+    root: info
+    org.hibernate.type.descriptor.sql.BasicBinder: TRACE
+    org.hibernate.type.descriptor.sql.BasicExtractor: TRACE
+    cn.jiayao: DEBUG
