@@ -1,24 +1,24 @@
 server:
-  #ÅäÖÃ¶Ë¿ÚºÅ
-  port: 7900
+  #é…ç½®ç«¯å£å·
+  port: 8000
 spring:
   jpa:
-    #ÉèÖÃÆô¶¯Ê±ÊÇ·ñÉú³ÉDDLÓï¾ä£¬sqlÒÑĞ´£¬ËùÒÔfalse
+    #è®¾ç½®å¯åŠ¨æ—¶æ˜¯å¦ç”ŸæˆDDLè¯­å¥ï¼Œsqlå·²å†™ï¼Œæ‰€ä»¥false
     generate-ddl: false
-    #ÊÇ·ñÏÔÊ¾sqlÓï¾ä
+    #æ˜¯å¦æ˜¾ç¤ºsqlè¯­å¥
     show-sql: true
-    #Æô¶¯Ê±DDLÓï¾ä´¦Àí
+    #å¯åŠ¨æ—¶DDLè¯­å¥å¤„ç†
     hibernate:
       ddl-auto: none
-  #Êı¾İÔ´
+  #æ•°æ®æº
   datasource:
-    #Ö¸¶¨Êı¾İ¿âÀàĞÍ
+    #æŒ‡å®šæ•°æ®åº“ç±»å‹
     platform: h2
-    #ÉèÖÃ½¨±íÓï¾ä£ºÂ·¾¶+ÎÄ¼şÃû
+    #è®¾ç½®å»ºè¡¨è¯­å¥ï¼šè·¯å¾„+æ–‡ä»¶å
     schema: classpath:schema.sql
-    #ÉèÖÃÊı¾İ±íÊı¾İ£º
+    #è®¾ç½®æ•°æ®è¡¨æ•°æ®ï¼š
     data: classpath:data.sql
-#ÅäÖÃÈÕÖ¾¼¶±ğ
+#é…ç½®æ—¥å¿—çº§åˆ«
 logging:
   level:
     root: info

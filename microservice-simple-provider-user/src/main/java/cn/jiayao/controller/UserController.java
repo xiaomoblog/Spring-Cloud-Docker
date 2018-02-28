@@ -2,6 +2,7 @@ package cn.jiayao.controller;
 
 import cn.jiayao.dao.UserDao;
 import cn.jiayao.domain.User;
+import cn.jiayao.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -15,12 +16,13 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/user")
 @RestController
 public class UserController {
+
     @Autowired
-    private UserDao userDao;
+    private UserService userService;
 
     @GetMapping("/{id}")
     public  User  findUserById(@PathVariable Long id){
-        User user = userDao.getOne(id);
+        User user = userService.getOne(id);
         System.out.println(user);
         return user;
     }
